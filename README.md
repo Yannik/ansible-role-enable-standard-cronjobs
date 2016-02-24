@@ -1,5 +1,7 @@
-Role Name
+Description
 =========
+
+[![Build Status](https://travis-ci.org/Yannik/ansible-role-enable-standard-cronjobs.svg?branch=master)](https://travis-ci.org/Yannik/ansible-role-enable-standard-cronjobs)
 
 This role removes the .disabled extension that hosting companys sometimes adds to default cronjobs to disable them and save cpu cycles. These cronjobs generally exist for a cause and should be run if there is no reason against it.
 

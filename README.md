@@ -14,6 +14,7 @@ Role Variables
 --------------
 
 * `cronjob_enable_blacklist`: list of cronjobs that should not get enabled
+* `cronjob_enable_list`: list of cronjobs that should get enabled. only change this if you need to enable more cronjobs in addition to the default ones in `defaults/main.yml`
 
 Example Playbook
 ----------------

@@ -6,7 +6,5 @@
      - /etc/cron.weekly/*.disabled
      - /etc/cron.monthly/*.disabled
    when: > 
-        item|regex_replace('.+/(.+).disabled', '\\1') in ['apt', 'man-db', 'aptitude', 'bsdmainutils', 
-                                                           'cracklib-runtime', 'dpkg', 'mlocate', 'passwd',
-                                                            'quota', 'upstart', 'fstrim', 'logrotate'] and
+        item|regex_replace('.+/(.+).disabled', '\\1') in cronjob_enable_list and
         item|regex_replace('.+/(.+).disabled', '\\1') not in cronjob_enable_blacklist

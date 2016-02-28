@@ -10,4 +10,4 @@ galaxy_info:
     - all
   
   galaxy_tags: ['cronjob', 'cronjobs', 'system']
-  dependencies: []
+dependencies: []

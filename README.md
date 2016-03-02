@@ -19,13 +19,13 @@ Role Variables
 Example Playbook
 ----------------
 
-    - hosts: servers
+    - hosts: all
       roles:
-         - enable-standard-cronjobs
+         - Yannik.enable-standard-cronjobs
 
-    - hosts: servers
+    - hosts: all
       roles:
-         - { role: enable-standard-cronjobs, cronjob_enable_blacklist: ['passwd'] }
+         - { role: Yannik.enable-standard-cronjobs, cronjob_enable_blacklist: ['passwd'] }
 
 License
 -------

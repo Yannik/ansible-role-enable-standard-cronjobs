@@ -10,7 +10,7 @@
  - name: remove disabled postfix from cronjobs
    command: mv {{ item }} {{ item | regex_replace('.disabled$', '') }}
    with_items: "{{ cronjob_disabled_files.files | map(attribute='path') | list }}"
-   when: > 
+   when: >
         item|regex_replace('.+/(.+).disabled', '\\1') in cronjob_enable_list and
         item|regex_replace('.+/(.+).disabled', '\\1') not in cronjob_enable_blacklist
 

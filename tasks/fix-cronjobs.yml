@@ -1,4 +1,4 @@
- - name: get list of cronjobs with disabled postfix
+ - name: get list of cronjobs with ".disabled" suffix
    find:
      paths:
        - /etc/cron.daily
@@ -7,7 +7,7 @@
      patterns: "*.disabled"
    register: cronjob_disabled_files
 
- - name: remove disabled postfix from cronjobs
+ - name: remove ".disabled" suffix from cronjobs
    command: mv {{ item }} {{ item | regex_replace('.disabled$', '') }}
    with_items: "{{ cronjob_disabled_files.files | map(attribute='path') | list }}"
    when: > 

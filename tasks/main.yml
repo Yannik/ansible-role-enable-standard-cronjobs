@@ -1,2 +1,2 @@
- - include: fix-cronjobs.yml
+ - import_tasks: fix-cronjobs.yml
    tags: fix-cronjobs
